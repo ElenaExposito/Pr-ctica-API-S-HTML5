@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API's de HTML5</title>
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>API'S DE HTML5. CARGAR EL VÍDEO</h1>
+
+    <div>
+      <label for="videoFile">Selecciona un archivo de video:</label>
+      <input
+        type="file"
+        id="videoFile"
+        name="file"
+        accept="video/*"
+        onchange="handleFileChange(event)"
+      />
+    </div>
+    <p id="loading" hidden>Cargando...</p>
+    <video width="400" src="" id="videoPlayer"></video>
+    <div id="buttons" hidden>
+      <button onclick="playVideo()">Reproducir</button>
+      <button onclick="pauseVideo()">Pausa</button>
+      <button onclick="turnUpVideo()">Subir Volumen</button>
+      <button onclick="turnDownVideo()">Bajar Volumen</button>
+    </div>
+  </body>
+  <script src="./index.js" type="text/javascript"></script>
+</html>
